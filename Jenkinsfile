@@ -50,7 +50,7 @@ node {
 			sh "echo 'after deploy-function'"						
 			
 			//sh "$DOTNET_PATH/dotnet-lambda deploy-serverless ${FUNCTION_NAME} --s3-bucket ${S3_BUCKET} --stack-name ${FUNCTION_NAME} "
-			sh "$DOTNET_PATH/dotnet-lambda deploy-serverless -template serverless.template"
+			sh "$DOTNET_PATH/dotnet-lambda deploy-serverless -template serverless.template --s3-bucket ${S3_BUCKET} --stack-name ${FUNCTION_NAME}"
 
 		}
 	}
